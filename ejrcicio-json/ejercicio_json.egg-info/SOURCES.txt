@@ -1,0 +1,9 @@
+setup.py
+ejercicio_json.egg-info/PKG-INFO
+ejercicio_json.egg-info/SOURCES.txt
+ejercicio_json.egg-info/dependency_links.txt
+ejercicio_json.egg-info/top_level.txt
+src/Person.py
+src/__init__.py
+tests/__init__.py
+tests/test0.py
