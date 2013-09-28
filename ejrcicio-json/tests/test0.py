@@ -1,17 +1,19 @@
 import unittest
 import src
 
+
 class TestPerson(unittest.TestCase):
 
     def setUp(self):
-        pass
+        self.p = src.Person.Person('Juan', 'Perez', '1990-08-23')
 
     def test_init_person(self):
-        p = src.Person.Person('Juan','Perez','1990-08-23')
-        self.assertEqual(p.name,'Juan','Person name not equal.')
-        self.assertEqual(p.last_name,'Perez','Person last_name not equal')
-        self.assertEqual(p.birth,'1990-08-23','Person birth date not equel')
+        self.assertEqual(self.p.name, 'Juan')
+        self.assertEqual(self.p.last_name, 'Perez')
+        self.assertEqual(self.p.birth, '1990-08-23')
+
+    def test_to_dict(self):
+        assert isinstance(self.p.to_dict(), dict)
 
 if __name__ == '__main__':
         unittest.main()
-
